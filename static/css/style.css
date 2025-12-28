@@ -1,0 +1,207 @@
+/* -------------------------------
+   Base
+-------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #e5e7eb;
+    line-height: 1.7;
+}
+
+/* -------------------------------
+   Layout
+-------------------------------- */
+.page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 56px 28px;
+}
+
+.header {
+    margin-bottom: 56px;
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+.header p {
+    margin-top: 10px;
+    color: #9ca3af;
+    font-size: 1.05rem;
+}
+
+/* -------------------------------
+   Cards
+-------------------------------- */
+.card,
+.result {
+    background-color: #111827;
+    border-radius: 14px;
+    padding: 40px;
+    margin-bottom: 56px;
+    border: 1px solid #1f2933;
+}
+
+.card h2 {
+    margin-bottom: 32px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* -------------------------------
+   Form
+-------------------------------- */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+}
+
+.form-group label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: #d1d5db;
+    margin-bottom: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+/* -------------------------------
+   Button
+-------------------------------- */
+.primary-btn {
+    margin-top: 40px;
+    padding: 14px 36px;
+    background-color: #22c55e;
+    color: #052e16;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    opacity: 0.9;
+}
+
+/* -------------------------------
+   Result States
+-------------------------------- */
+.result.low { border-left: 5px solid #22c55e; }
+.result.medium { border-left: 5px solid #f59e0b; }
+.result.high { border-left: 5px solid #ef4444; }
+
+.hidden {
+    display: none;
+}
+
+/* -------------------------------
+   Animations
+-------------------------------- */
+.fade-in {
+    animation: fade 0.8s ease forwards;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: all 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background-color: #020617;
+    border: 1px solid #1f2933;
+    color: #e5e7eb;
+    font-size: 0.95rem;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: #22c55e;
+}
+
+/* -------------------------------
+   Stress History Table
+-------------------------------- */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+}
+
+.history-table th,
+.history-table td {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.history-table thead {
+    background-color: #020617;
+}
+
+.history-table th {
+    color: #9ca3af;
+    font-weight: 500;
+    border-bottom: 1px solid #1f2933;
+}
+
+.history-table tbody tr {
+    border-bottom: 1px solid #1f2933;
+}
+
+.history-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.empty-state {
+    text-align: center;
+    color: #6b7280;
+    padding: 24px;
+}
+.secondary-btn {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 10px 24px;
+    background-color: transparent;
+    color: #22c55e;
+    border: 1px solid #22c55e;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.secondary-btn:hover {
+    background-color: #22c55e;
+    color: #052e16;
+}
